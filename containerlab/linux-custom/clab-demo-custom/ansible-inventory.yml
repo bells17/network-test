@@ -1,0 +1,12 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-demo-custom-c1:
+          ansible_host: 172.20.20.7
+        clab-demo-custom-c2:
+          ansible_host: 172.20.20.6
+        clab-demo-custom-n1:
+          ansible_host: 172.20.20.5
+        clab-demo-custom-n2:
+          ansible_host: 172.20.20.4

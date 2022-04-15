@@ -1,0 +1,16 @@
+all:
+  children:
+    linux:
+      hosts:
+        clab-clos01-client1:
+          ansible_host: 172.20.20.2
+        clab-clos01-client2:
+          ansible_host: 172.20.20.3
+    srl:
+      hosts:
+        clab-clos01-leaf1:
+          ansible_host: 172.20.20.4
+        clab-clos01-leaf2:
+          ansible_host: 172.20.20.5
+        clab-clos01-spine:
+          ansible_host: 172.20.20.6

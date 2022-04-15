@@ -1,0 +1,21 @@
+name: demo-custom
+
+topology:
+  nodes:
+    n1:
+      kind: linux
+      image: alpine:latest
+    n2:
+      kind: linux
+      image: alpine:latest
+    c1:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+    c2:
+      kind: linux
+      image: ghcr.io/hellt/network-multitool
+  links:
+    - endpoints: ["n1:eth1", "n2:eth1"]
+    - endpoints: ["c1:eth2", "n1:eth2"]
+    - endpoints: ["c2:eth2", "n2:eth2"]
+
